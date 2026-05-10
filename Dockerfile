@@ -4,10 +4,10 @@ ARG PB_VERSION=0.22.20
 
 RUN apk add --no-cache unzip ca-certificates wget
 
-RUN wget https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip 
--O /tmp/pb.zip && 
-unzip /tmp/pb.zip -d /pb/ && 
-rm /tmp/pb.zip
+RUN wget https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip \
+     -O /tmp/pb.zip && \
+     unzip /tmp/pb.zip -d /pb/ && \
+     rm /tmp/pb.zip
 
 RUN chmod +x /pb/pocketbase
 
